@@ -3,33 +3,48 @@
   "theme": "mint",
   "name": "Mint Starter Kit",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#4E00CC",
+    "light": "#A066FF",
+    "dark": "#270066"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.jpg",
   "navigation": {
     "tabs": [
       {
         "tab": "Guides",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Introduction",
             "pages": [
-              "introduction",
-              "quickstart",
-              "development"
+              "content/intro/about",
+              "content/intro/why",
+              "content/intro/meet-soteria"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Soteria",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "content/soteria/tutorial",
+              "content/soteria/how-to-use",
+              "content/soteria/what-you-can-do",
+              "content/soteria/apis",
+              "content/soteria/tools"
+            ]
+          },
+          {
+            "group": "No Code R&D Platform",
+            "pages": [
+              "content/nocoder&d/simulation-engine",
+              "content/nocoder&d/strategy-builder"
+            ]
+          },
+          {
+            "group": "End-to-End Portfolio Management System",
+            "pages": [
+              "content/portfoliomanagement/execution-engine",
+              "content/portfoliomanagement/real-time-data",
+              "content/portfoliomanagement/monitoring&reporting",
+              "content/portfoliomanagement/holistic-integration"
             ]
           }
         ]
@@ -54,30 +69,11 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]    
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/logo-rough.png",
+    "dark": "/logo/logo-rough.png"
   },
   "navbar": {
     "links": [
@@ -94,8 +90,8 @@
   },
   "footer": {
     "socials": {
+      "website": "https://biasafe.ai/",
       "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
   }
