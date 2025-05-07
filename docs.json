@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Mint Starter Kit",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#4E00CC",
+    "light": "#A066FF",
+    "dark": "#270066"
   },
   "favicon": "/favicon.jpg",
   "navigation": {
@@ -22,6 +22,16 @@
             ]
           },
           {
+            "group": "Soteria",
+            "pages": [
+              "content/soteria/tutorial",
+              "content/soteria/how-to-use",
+              "content/soteria/what-you-can-do",
+              "content/soteria/apis",
+              "content/soteria/tools"
+            ]
+          },
+          {
             "group": "No Code R&D Platform",
             "pages": [
               "content/nocoder&d/simulation-engine",
@@ -35,22 +45,6 @@
               "content/portfoliomanagement/real-time-data",
               "content/portfoliomanagement/monitoring&reporting",
               "content/portfoliomanagement/holistic-integration"
-            ]
-          },
-          {
-            "group": "Team",
-            "pages": [
-              "content/team/team-structure"
-            ]
-          },
-
-          {
-            "group": "essentials",
-            "pages": [
-              "essentials/code",
-              "essentials/images",
-              "essentials/markdown",
-              "essentials/navigation"
             ]
           }
         ]
@@ -75,26 +69,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Website",
-          "href": "https://biasafe.ai/",
-          "icon": "book-open"
-        },
-        {
-          "anchor": "linkedin",
-          "href": "https://www.linkedin.com/company/biasafe/",
-          "icon": "linkedin"
-        },
-        {
-          "anchor": "X",
-          "href": "https://x.com/BIASafe_AI/with_replies",
-          "icon": "x-twitter"
-        }
-      ]
-    }
+    ]    
   },
   "logo": {
     "light": "/logo/logo-rough.png",
@@ -115,8 +90,8 @@
   },
   "footer": {
     "socials": {
+      "website": "https://biasafe.ai/",
       "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
   }
