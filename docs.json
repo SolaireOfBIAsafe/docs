@@ -14,22 +14,33 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Introduction",
             "pages": [
-              "introduction",
-              "quickstart",
-              "development"
+              "content/intro/about",
+              "content/intro/why",
+              "content/intro/meet-soteria"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "No Code R&D Platform",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "content/nocoder&d/simulation-engine",
+              "content/nocoder&d/strategy-builder"
+            ]
+          },
+          {
+            "group": "End-to-End Portfolio Management System",
+            "pages": [
+              "content/portfoliomanagement/execution-engine",
+              "content/portfoliomanagement/real-time-data",
+              "content/portfoliomanagement/monitoring&reporting",
+              "content/portfoliomanagement/holistic-integration"
+            ]
+          },
+          {
+            "group": "Team",
+            "pages": [
+              "content/team/team-structure"
             ]
           }
         ]
