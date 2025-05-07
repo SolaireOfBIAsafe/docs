@@ -7,7 +7,7 @@
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.jpg",
   "navigation": {
     "tabs": [
       {
@@ -42,6 +42,16 @@
             "pages": [
               "content/team/team-structure"
             ]
+          },
+
+          {
+            "group": "essentials",
+            "pages": [
+              "essentials/code",
+              "essentials/images",
+              "essentials/markdown",
+              "essentials/navigation"
+            ]
           }
         ]
       },
@@ -69,26 +79,26 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Website",
+          "href": "https://biasafe.ai/",
+          "icon": "book-open"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "anchor": "linkedin",
+          "href": "https://www.linkedin.com/company/biasafe/",
+          "icon": "linkedin"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "X",
+          "href": "https://x.com/BIASafe_AI/with_replies",
+          "icon": "x-twitter"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/logo-rough.png",
+    "dark": "/logo/logo-rough.png"
   },
   "navbar": {
     "links": [
