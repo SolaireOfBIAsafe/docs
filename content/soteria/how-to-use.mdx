@@ -1,4 +1,128 @@
 ---
-title: How To Use
-description: ...
+
+title: Getting started with Soteria
+sidebar\_position: 1
+--------------------
+
+Welcome to **Soteria** – your all‑in‑one finance copilot. This page walks you through the web app, shows how to craft effective prompts, and highlights every widget you see on‑screen.
+
+> **tip**
+> Prefer videos? A 90‑second tour is available [here](#).
+
 ---
+
+## 1. Home screen at a glance
+
+| Area                                     | What you’ll see                                                     | Why it matters                                                                        |
+| ---------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **A – Prompt bar**                       | A single search‑like box (“What can I help you with?”)              | Type natural‑language requests: *“Optimise my portfolio”*, *“Fetch MSFT’s earnings”*… |
+| **B – Suggested cards**                  | Quick examples (Correlation, Macroeconomics, Technical Analysis, …) | One‑click prompts when you’re in a hurry or need inspiration.                         |
+| **C – Watchlist panel (left slide‑out)** | Faves, **Top Gainers**, **Top Losers**, **Top News**                | Track moves in real time. Click **+** to add, or hover ▶︎ **×** to remove.            |
+| **D – Settings panel (right slide‑out)** | Profile, API keys, Subscription, Theme toggle                       | Update credentials, switch dark/light mode, manage billing.                           |
+
+![Home layouts](/images/home-layout.png)
+
+---
+
+## 2. Crafting great prompts
+
+Soteria understands plain English. Keep requests **concise & goal‑oriented**:
+
+| ✅ Good                                                      | 🚫 Could be better              |
+| ----------------------------------------------------------- | ------------------------------- |
+| “Plot the 1‑year drawdown curve for my portfolio.”          | “Show interesting chart stuff.” |
+| “Which NASDAQ stocks have RSI>70 on the 4‑hour?”            | “Tell me about technicals.”     |
+| “Back‑test my holdings since 2020 and suggest new weights.” | “Run some fancy model.”         |
+
+### Prompt building blocks
+
+1. **Action** – *fetch, analyse, optimise, trade…*
+2. **Object** – *AAPL price, portfolio, BTC volatility…*
+3. **Detail** (optional) – *date range, metric, confidence level…*
+
+> **example**
+> “Fetch daily closing prices for NVDA, 2021‑01‑01 → today, then plot a 30‑day moving average.”
+
+Soteria will automatically:
+
+* Pick the right data tool
+* Explain what it plans to do
+* Return a chart + table
+
+---
+
+## 3. Watchlist panel
+
+Open with **← Watchlist**.
+
+| Feature                  | How‑to                                                          |
+| ------------------------ | --------------------------------------------------------------- |
+| **Search box**           | Type a ticker or name → press ↵ to pin.                         |
+| **Top Gainers / Losers** | Auto‑updates every minute; click a symbol to open a mini‑chart. |
+| **Top News**             | Scroll headlines, click to summarise in chat.                   |
+| **Remove**               | Hover an item → click the ⓧ.                                    |
+
+> **prompt shortcut**
+> “Add NVDA and META to my watchlist.”
+
+---
+
+## 4. Portfolio → Overview tab
+
+![Portfolio overview](/images/portfolio-overview.png)
+
+| Widget                                                           | How to use                                                                         |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **Portfolio Value / PnL / Cash tiles**                           | Real‑time snapshot. Zero? → Connect broker API in **Settings › API Keys**.         |
+| **Time‑range selector** (Max • 1D • 5D • 1M • 3M • 6M • 1Y • 5Y) | Click to zoom the performance chart.                                               |
+| **Chart / Bar toggle**                                           | Line chart or allocation bars.                                                     |
+| **Allocation box**                                               | Hover slices for exact % weights. Empty? → Add holdings via prompt or broker sync. |
+| **Transactions tab**                                             | View every fill, cancel, or dividend; CSV export in the corner menu.               |
+
+### Quick prompts from Overview
+
+```text
+Rebalance my portfolio to equal weight the top 5 positions.
+```
+
+```text
+Explain why PnL was negative on 2024‑10‑05.
+```
+
+---
+
+## 5. Settings panel
+
+Open with **→ Settings**.
+
+| Section          | What you can edit                                                 |
+| ---------------- | ----------------------------------------------------------------- |
+| **Profile**      | Display name, avatar, preferred currency.                         |
+| **API Keys**     | Paste your broker & data‑vendor keys; toggle *sandbox* vs *live*. |
+| **Subscription** | Plan, payment method, invoices.                                   |
+| **Appearance**   | Dark / Light switch (instant, no reload).                         |
+
+---
+
+## 6. Common flows
+
+| Task                      | One‑line prompt                                      |
+| ------------------------- | ---------------------------------------------------- |
+| Add a stock to watchlist  | “Watch AAPL.”                                        |
+| Remove a crypto           | “Un‑watch BTC.”                                      |
+| Plot rolling volatility   | “Plot 90‑day vol for SPY since 2022‑01‑01.”          |
+| Fetch latest cash balance | “Show my buying power.”                              |
+| Draft a trade             | “Buy 50 NVDA at market, but **ask before sending**.” |
+| Cancel the latest order   | “Cancel my most recent order.”                       |
+
+---
+
+### Next steps
+
+Ready to trade? Head to **Workflows › Portfolio Back‑test** or simply ask:
+
+```text
+Optimise my portfolio and propose trades.
+```
+
+Soteria will guide you the rest of the way.
