@@ -44,7 +44,8 @@
               "content/portfoliomanagement/execution-engine",
               "content/portfoliomanagement/real-time-data",
               "content/portfoliomanagement/monitoring&reporting",
-              "content/portfoliomanagement/holistic-integration"
+              "content/portfoliomanagement/holistic-integration",
+              "content/portfoliomanagement/portfolio-risk"
             ]
           },
           {
