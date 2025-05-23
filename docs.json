@@ -4,8 +4,8 @@
   "name": "Mint Starter Kit",
   "colors": {
     "primary": "#4E00CC",
-    "light": "#A066FF",
-    "dark": "#270066"
+    "light": "#B088F2",
+    "dark": "#4E00CC"
   },
   "favicon": "/favicon.jpg",
   "navigation": {
@@ -46,6 +46,17 @@
               "content/portfoliomanagement/monitoring&reporting",
               "content/portfoliomanagement/holistic-integration"
             ]
+          },
+          {
+            "group": "Prompting",
+            "pages": [
+              "content/prompting/basics",
+              "content/prompting/advancedAnalytics"
+            ]
+          },
+          {
+            "group": "Team",
+            "pages": ["content/team/team-structure"]
           }
         ]
       },
@@ -54,9 +65,7 @@
         "groups": [
           {
             "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
+            "pages": ["api-reference/introduction"]
           },
           {
             "group": "Endpoint Examples",
