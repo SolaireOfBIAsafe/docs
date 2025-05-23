@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Mint Starter Kit",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#4E00CC",
+    "light": "#B088F2",
+    "dark": "#4E00CC"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -38,10 +38,15 @@
             ]
           },
           {
-            "group": "Team",
+            "group": "Prompting",
             "pages": [
-              "content/team/team-structure"
+              "content/prompting/basics",
+              "content/prompting/advancedAnalytics"
             ]
+          },
+          {
+            "group": "Team",
+            "pages": ["content/team/team-structure"]
           }
         ]
       },
@@ -50,9 +55,7 @@
         "groups": [
           {
             "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
+            "pages": ["api-reference/introduction"]
           },
           {
             "group": "Endpoint Examples",
