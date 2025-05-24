@@ -7,7 +7,7 @@
     "light": "#B088F2",
     "dark": "#4E00CC"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.jpg",
   "navigation": {
     "tabs": [
       {
@@ -19,6 +19,16 @@
               "content/intro/about",
               "content/intro/why",
               "content/intro/meet-soteria"
+            ]
+          },
+          {
+            "group": "Soteria",
+            "pages": [
+              "content/soteria/tutorial",
+              "content/soteria/how-to-use",
+              "content/soteria/what-you-can-do",
+              "content/soteria/apis",
+              "content/soteria/tools"
             ]
           },
           {
@@ -68,30 +78,11 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]    
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/logo-rough.png",
+    "dark": "/logo/logo-rough.png"
   },
   "navbar": {
     "links": [
@@ -108,8 +99,8 @@
   },
   "footer": {
     "socials": {
+      "website": "https://biasafe.ai/",
       "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
   }
