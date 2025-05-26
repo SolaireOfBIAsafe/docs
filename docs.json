@@ -24,7 +24,6 @@
           {
             "group": "Soteria",
             "pages": [
-              "content/soteria/tutorial",
               "content/soteria/how-to-use",
               "content/soteria/what-you-can-do",
               "content/soteria/apis",
@@ -44,7 +43,8 @@
               "content/portfoliomanagement/execution-engine",
               "content/portfoliomanagement/real-time-data",
               "content/portfoliomanagement/monitoring&reporting",
-              "content/portfoliomanagement/holistic-integration"
+              "content/portfoliomanagement/holistic-integration",
+              "content/portfoliomanagement/portfolio-risk"
             ]
           },
           {
