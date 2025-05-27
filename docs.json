@@ -25,8 +25,13 @@
             "group": "Soteria",
             "pages": [
               "content/soteria/tutorial",
-              "content/soteria/how-to-use",
-              "content/soteria/what-you-can-do",
+              {
+                "group": "Prompting",
+                "pages": [
+                  "content/soteria/prompting/basics",
+                  "content/soteria/prompting/advancedAnalytics"
+                ]
+              },
               "content/soteria/apis",
               "content/soteria/tools"
             ]
@@ -46,17 +51,6 @@
               "content/portfoliomanagement/monitoring&reporting",
               "content/portfoliomanagement/holistic-integration"
             ]
-          },
-          {
-            "group": "Prompting",
-            "pages": [
-              "content/prompting/basics",
-              "content/prompting/advancedAnalytics"
-            ]
-          },
-          {
-            "group": "Team",
-            "pages": ["content/team/team-structure"]
           }
         ]
       },
@@ -78,11 +72,11 @@
           }
         ]
       }
-    ]    
+    ]
   },
   "logo": {
-    "light": "/logo/logo-rough.png",
-    "dark": "/logo/logo-rough.png"
+    "light": "/BIASafeLogo.png",
+    "dark": "/BIASafeLogo.png"
   },
   "navbar": {
     "links": [
@@ -100,8 +94,8 @@
   "footer": {
     "socials": {
       "website": "https://biasafe.ai/",
-      "x": "https://x.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/BIASafe_AI",
+      "linkedin": "https://www.linkedin.com/company/biasafe/"
     }
   }
 }
