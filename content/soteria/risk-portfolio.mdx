@@ -1,0 +1,188 @@
+---
+title: Risk Portfolio
+description:
+---
+
+Think of **Soteria** as your personal quant analyst. You speak in plain English; it quietly runs the right RiskFolio tool under the hood. Use this cheat‑sheet whenever you wonder _“What should I ask, and which modes are available?”_
+
+---
+
+## Quick Start
+
+> “Optimize a minimum‑variance mix of AAPL, MSFT, NVDA; cap any stock at 20 %; plot the growth of \$1.”
+>
+> **Soteria replies** with weights, a pie chart, and a line chart—asking you first if you want to place the trades.
+> That’s the magic: one sentence, multiple tools. Read on for the full menu.
+
+## Download Historical Returns
+
+**Function:** Pulls price data and converts to percentage returns $r_{t,i}=\frac{P_{t,i}-P_{t-1,i}}{P_{t-1,i}}$ or log returns $\ln P_t-\ln P_{t-1}$.
+
+**Key phrases:** `log returns`, `adjusted close`, explicit date range.
+
+**Example prompt:** “Fetch **log returns** for AAPL & MSFT from 2020‑01‑01.”
+
+---
+
+## Plot Cumulative Growth
+
+**Function:** Calculates compounded value of \$1: $V_t=\prod_{\tau\le t}(1+r_{\tau,p})$ and draws a line chart.
+
+**Key phrases:** `title`.
+
+**Example prompt:** “Plot cumulative growth; **title** Tech vs S\&P.”
+
+---
+
+## Show Allocation Pie
+
+**Function:** Displays the current weight vector $w$ as a pie chart.
+
+**Key phrases:** `title`.
+
+**Example prompt:** “Pie‑chart my optimized weights.”
+
+---
+
+## Classic Mean‑Variance Optimization
+
+**Function:** Solves a Markowitz‑style problem—e.g. minimize variance $w^T\Sigma w$ or maximize Sharpe.
+
+**Key phrases:** `Classic` / `FM`; risk measure (`MV`, `CVaR`, `MDD`, …); objective (`Sharpe`, `MinRisk`, `Utility l=3`); `allow shorts`.
+
+**Example prompt:** “**Maximize Sharpe** for these 10 stocks—**allow shorts** 20 %; risk = **CVaR 95 %**.”
+
+---
+
+## Optimization with Weight Limits
+
+**Function:** Same as above but respects linear caps/floors like $w_i≤0.12$ or sector totals.
+
+**Key phrases:** Natural‑language limits — “no stock above 12 %,” “Bonds ≥ 10 %.”
+
+**Example prompt:** “Min‑variance; **cap** any stock at 15 %; **Bonds ≥ 10 %**.”
+
+---
+
+## Hierarchical Clustering Optimization
+
+**Function:** Builds HRP/HERC/NCO portfolios—clusters assets then allocates without inverting $\Sigma$.
+
+**Key phrases:** model `HRP`, `HERC`, `HERC2`, `NCO`; dependency (`pearson`, `distance`); optional risk target.
+
+**Example prompt:** “Create an **HRP** portfolio of these 30 ETFs; minimize variance.”
+
+---
+
+## Estimate Expected Returns
+
+**Function:** Produces the mean vector $\mu$ via historical or shrinkage estimators.
+
+| Method keyword | Idea (math‑lite)            | When useful                            |
+| -------------- | --------------------------- | -------------------------------------- |
+| `hist`         | Simple arithmetic mean      | Stable markets, long history           |
+| `EWMA λ`       | Weighted mean (1‑λ)Σλ^t r_t | Emphasize recent data or regime shifts |
+| `James‑Stein`  | Shrink toward grand mean    | Many assets, small sample              |
+| `Bayes‑Stein`  | Shrink toward prior belief  | Expect modest excess returns           |
+| `BOP`          | Fully Bayesian posterior    | Need probabilistic estimates           |
+
+**Key phrases:** any method keyword above (e.g. `EWMA λ 0.94`).
+
+**Example prompt:** “Estimate mean returns with **EWMA λ 0.94**.”
+
+---
+
+## Estimate Covariance Matrix
+
+**Function:** Produces $\Sigma$ with robust or shrunk estimators.
+
+| Method keyword | Idea                      | When useful                          |
+| -------------- | ------------------------- | ------------------------------------ |
+| `hist`         | Sample covariance         | Plenty of observations per asset     |
+| `Ledoit`       | Shrink toward identity    | Many assets, noisy sample            |
+| `EWMA`         | Decay‑weighted covariance | Volatility clustering, recent shocks |
+| `semi`         | Downside semi‑covariance  | Focus on downside risk only          |
+| `kernel`       | Non‑parametric smoothing  | Heavy tails or nonlinear dependence  |
+
+**Key phrases:** any keyword above + `detone market` (removes first PC).
+
+**Example prompt:** “Use **Ledoit** covariance and **detone market**.”
+
+---
+
+## Compute Cokurtosis Matrix
+
+**Function:** Estimates fourth‑order co‑moments $K_{ijkl}=E[(r_i-\mu_i)…(r_l-\mu_l)]$ to capture tail dependence.
+
+**Key phrases:** `alpha 0.05`, method (`hist`, `exp`).
+
+**Example prompt:** “Cokurtosis **alpha 0.05** for FAANG.”
+
+---
+
+## Risk‑Adjusted Sharpe Ratio
+
+**Function:** $\text{SR}=\frac{\mu_p-r_f}{\rho(p)}$ where $\rho$ may be variance, CVaR, MDD, etc.
+
+**Key phrases:** risk keyword (`CVaR`, `MDD`, `MAD`, …).
+
+**Example prompt:** “Sharpe using **CVaR** at 95 % for these weights.”
+
+---
+
+## Single Risk Metric
+
+**Function:** Returns one statistic such as MAD, max drawdown, etc.
+
+| Metric          | Description             |
+| --------------- | ----------------------- |
+| `MAD`           | Mean absolute deviation |
+| `MDD_Rel`       | Relative max drawdown   |
+| `SemiDeviation` | Downside deviation      |
+| `Kurtosis`      | 4th‑moment fat‑tailness |
+
+**Key phrases:** any metric keyword above.
+
+**Example prompt:** “Compute **MDD_Rel** for BTC daily returns.”
+
+---
+
+## Build Portfolio Return Series
+
+**Function:** Combines asset returns with weights; optional periodic rebalancing.
+
+**Key phrases:** `rebalance true` (monthly) or `rebalance false` (buy‑and‑hold).
+
+**Example prompt:** “Portfolio returns with **quarterly rebalancing**.”
+
+---
+
+## Export CSV Report
+
+**Function:** Generates a CSV containing dates, asset returns, portfolio return, variance, CVaR, Sharpe.
+
+**Key phrases:** (no extra keywords—just ask).
+
+**Example prompt:** “Export a **CSV** performance report.”
+
+---
+
+## Quick Cheat Sheet
+
+| Capability       | Key phrases                                  | Prompt snippet                      |
+| ---------------- | -------------------------------------------- | ----------------------------------- |
+| Download returns | `log returns`, `adjusted`, dates             | “log returns for AAPL 2020‑01‑01”   |
+| Plot growth      | `title`                                      | “plot growth title: Tech vs S\&P”   |
+| Pie chart        | `title`                                      | “pie‑chart weights”                 |
+| Classic optimize | risk (`CVaR 95 %`), `Sharpe`, `allow shorts` | “Max‑Sharpe CVaR 95 % allow shorts” |
+| Caps optimize    | caps/floors text                             | “cap stock ≤ 12 %”                  |
+| HRP/HERC         | `HRP`, `minimize variance`                   | “HRP minimize variance”             |
+| Mean vector      | `EWMA λ`, `James‑Stein`                      | “mean James‑Stein”                  |
+| Covariance       | `Ledoit`, `detone`                           | “Ledoit covariance detone”          |
+| Cokurtosis       | `alpha 0.05`                                 | “cokurtosis alpha 0.05”             |
+| Sharpe ratio     | risk keyword                                 | “Sharpe CVaR”                       |
+| Risk metric      | metric keyword                               | “MDD_Rel BTC”                       |
+| Portfolio series | `rebalance true/false`                       | “returns quarterly rebalance”       |
+| Export CSV       | —                                            | “export CSV”                        |
+
+---

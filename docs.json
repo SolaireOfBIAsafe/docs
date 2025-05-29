@@ -33,14 +33,7 @@
                 ]
               },
               "content/soteria/apis",
-              "content/soteria/tools"
-            ]
-          },
-          {
-            "group": "No Code R&D Platform",
-            "pages": [
-              "content/nocoder&d/simulation-engine",
-              "content/nocoder&d/strategy-builder"
+              "content/soteria/risk-portfolio"
             ]
           },
           {
@@ -50,24 +43,6 @@
               "content/portfoliomanagement/real-time-data",
               "content/portfoliomanagement/monitoring&reporting",
               "content/portfoliomanagement/holistic-integration"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": ["api-reference/introduction"]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
             ]
           }
         ]
