@@ -11,12 +11,12 @@ Think of **Soteria** as your personal quant analyst. You speak in plain Englis
 
 > “Optimize a minimum‑variance mix of AAPL, MSFT, NVDA; cap any stock at 20 %; plot the growth of \$1.”
 >
-> **Soteria replies** with weights, a pie chart, and a line chart—asking you first if you want to place the trades.
+> **Soteria replies** with weights, a pie chart, and a line chart asking you first if you want to place the trades.
 > That’s the magic: one sentence, multiple tools. Read on for the full menu.
 
 ## Download Historical Returns
 
-**Function:** Pulls price data and converts to percentage returns $r_{t,i}=\frac{P_{t,i}-P_{t-1,i}}{P_{t-1,i}}$ or log returns $\ln P_t-\ln P_{t-1}$.
+**Function:** Retrieves historical price data and converts to percentage or logarithmic returns for analysis.
 
 **Key phrases:** `log returns`, `adjusted close`, explicit date range.
 
@@ -26,7 +26,7 @@ Think of **Soteria** as your personal quant analyst. You speak in plain Englis
 
 ## Plot Cumulative Growth
 
-**Function:** Calculates compounded value of \$1: $V_t=\prod_{\tau\le t}(1+r_{\tau,p})$ and draws a line chart.
+**Function:** Calculates and visualizes the compounded growth of portfolio value over time.
 
 **Key phrases:** `title`.
 
@@ -36,7 +36,7 @@ Think of **Soteria** as your personal quant analyst. You speak in plain Englis
 
 ## Show Allocation Pie
 
-**Function:** Displays the current weight vector $w$ as a pie chart.
+**Function:** Creates a visual pie chart representation of portfolio weight distributions.
 
 **Key phrases:** `title`.
 
@@ -45,20 +45,19 @@ Think of **Soteria** as your personal quant analyst. You speak in plain Englis
 ---
 
 ## Classic Mean‑Variance Optimization
-
-**Function:** Solves a Markowitz‑style problem—e.g. minimize variance $w^T\Sigma w$ or maximize Sharpe.
+**Function:** Performs traditional Markowitz style portfolio optimization (minimize variance $w^T\Sigma w$ or maximize Sharpe) with various risk measures and objectives. 
 
 **Key phrases:** `Classic` / `FM`; risk measure (`MV`, `CVaR`, `MDD`, …); objective (`Sharpe`, `MinRisk`, `Utility l=3`); `allow shorts`.
 
-**Example prompt:** “**Maximize Sharpe** for these 10 stocks—**allow shorts** 20 %; risk = **CVaR 95 %**.”
+**Example prompt:** “**Maximize Sharpe** for these 10 stocks **allow shorts** 20 %; risk = **CVaR 95 %**.”
 
 ---
 
 ## Optimization with Weight Limits
 
-**Function:** Same as above but respects linear caps/floors like $w_i≤0.12$ or sector totals.
+**Function:** Applies portfolio optimization while respecting user defined constraints on individual assets or asset classes.
 
-**Key phrases:** Natural‑language limits — “no stock above 12 %,” “Bonds ≥ 10 %.”
+**Key phrases:** “no stock above 12 %,” “Bonds ≥ 10 %.”
 
 **Example prompt:** “Min‑variance; **cap** any stock at 15 %; **Bonds ≥ 10 %**.”
 
@@ -66,7 +65,7 @@ Think of **Soteria** as your personal quant analyst. You speak in plain Englis
 
 ## Hierarchical Clustering Optimization
 
-**Function:** Builds HRP/HERC/NCO portfolios—clusters assets then allocates without inverting $\Sigma$.
+**Function:** Creates portfolios using hierarchical risk parity methods that cluster similar assets before allocation.
 
 **Key phrases:** model `HRP`, `HERC`, `HERC2`, `NCO`; dependency (`pearson`, `distance`); optional risk target.
 
@@ -76,7 +75,7 @@ Think of **Soteria** as your personal quant analyst. You speak in plain Englis
 
 ## Estimate Expected Returns
 
-**Function:** Produces the mean vector $\mu$ via historical or shrinkage estimators.
+**Function:** Generates forward looking return estimates using various statistical (historical or shrinkage estimators) approaches.
 
 | Method keyword | Idea (math‑lite)            | When useful                            |
 | -------------- | --------------------------- | -------------------------------------- |
@@ -94,7 +93,7 @@ Think of **Soteria** as your personal quant analyst. You speak in plain Englis
 
 ## Estimate Covariance Matrix
 
-**Function:** Produces $\Sigma$ with robust or shrunk estimators.
+**Function:** Computes asset correlation and volatility relationships using robust statistical estimators.
 
 | Method keyword | Idea                      | When useful                          |
 | -------------- | ------------------------- | ------------------------------------ |
@@ -112,7 +111,7 @@ Think of **Soteria** as your personal quant analyst. You speak in plain Englis
 
 ## Compute Cokurtosis Matrix
 
-**Function:** Estimates fourth‑order co‑moments $K_{ijkl}=E[(r_i-\mu_i)…(r_l-\mu_l)]$ to capture tail dependence.
+**Function:** Analyzes higher order statistical moments to capture tail risk and extreme event dependencies (estimates fourth order co‑moments $K_{ijkl}=E[(r_i-\mu_i)…(r_l-\mu_l)]$ to capture tail dependence).
 
 **Key phrases:** `alpha 0.05`, method (`hist`, `exp`).
 
@@ -122,7 +121,7 @@ Think of **Soteria** as your personal quant analyst. You speak in plain Englis
 
 ## Risk‑Adjusted Sharpe Ratio
 
-**Function:** $\text{SR}=\frac{\mu_p-r_f}{\rho(p)}$ where $\rho$ may be variance, CVaR, MDD, etc.
+**Function:** Calculates risk adjusted returns using various risk measures beyond standard deviation ($\text{SR}=\frac{\mu_p-r_f}{\rho(p)}$ where $\rho$ may be variance, CVaR, MDD, etc).
 
 **Key phrases:** risk keyword (`CVaR`, `MDD`, `MAD`, …).
 
@@ -131,8 +130,8 @@ Think of **Soteria** as your personal quant analyst. You speak in plain Englis
 ---
 
 ## Single Risk Metric
+**Function:** Computes individual risk statistics for detailed portfolio analysis and comparison.
 
-**Function:** Returns one statistic such as MAD, max drawdown, etc.
 
 | Metric          | Description             |
 | --------------- | ----------------------- |
@@ -149,7 +148,7 @@ Think of **Soteria** as your personal quant analyst. You speak in plain Englis
 
 ## Build Portfolio Return Series
 
-**Function:** Combines asset returns with weights; optional periodic rebalancing.
+**Function:** Constructs time series of portfolio performance with flexible rebalancing options.
 
 **Key phrases:** `rebalance true` (monthly) or `rebalance false` (buy‑and‑hold).
 
@@ -161,7 +160,7 @@ Think of **Soteria** as your personal quant analyst. You speak in plain Englis
 
 **Function:** Generates a CSV containing dates, asset returns, portfolio return, variance, CVaR, Sharpe.
 
-**Key phrases:** (no extra keywords—just ask).
+**Key phrases:** (no extra keywords).
 
 **Example prompt:** “Export a **CSV** performance report.”
 
@@ -183,6 +182,6 @@ Think of **Soteria** as your personal quant analyst. You speak in plain Englis
 | Sharpe ratio     | risk keyword                                 | “Sharpe CVaR”                       |
 | Risk metric      | metric keyword                               | “MDD_Rel BTC”                       |
 | Portfolio series | `rebalance true/false`                       | “returns quarterly rebalance”       |
-| Export CSV       | —                                            | “export CSV”                        |
+| Export CSV       | -                                            | “export CSV”                        |
 
 ---
