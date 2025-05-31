@@ -25,17 +25,15 @@
             "group": "Soteria",
             "pages": [
               "content/soteria/tutorial",
-              "content/soteria/how-to-use",
-              "content/soteria/what-you-can-do",
+              {
+                "group": "Prompting",
+                "pages": [
+                  "content/soteria/prompting/basics",
+                  "content/soteria/prompting/advancedAnalytics"
+                ]
+              },
               "content/soteria/apis",
-              "content/soteria/tools"
-            ]
-          },
-          {
-            "group": "No Code R&D Platform",
-            "pages": [
-              "content/nocoder&d/simulation-engine",
-              "content/nocoder&d/strategy-builder"
+              "content/soteria/risk-portfolio"
             ]
           },
           {
@@ -46,43 +44,14 @@
               "content/portfoliomanagement/monitoring&reporting",
               "content/portfoliomanagement/holistic-integration"
             ]
-          },
-          {
-            "group": "Prompting",
-            "pages": [
-              "content/prompting/basics",
-              "content/prompting/advancedAnalytics"
-            ]
-          },
-          {
-            "group": "Team",
-            "pages": ["content/team/team-structure"]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": ["api-reference/introduction"]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
           }
         ]
       }
-    ]    
+    ]
   },
   "logo": {
-    "light": "/logo/logo-rough.png",
-    "dark": "/logo/logo-rough.png"
+    "light": "/BIASafeLogo.png",
+    "dark": "/BIASafeLogo.png"
   },
   "navbar": {
     "links": [
@@ -100,8 +69,8 @@
   "footer": {
     "socials": {
       "website": "https://biasafe.ai/",
-      "x": "https://x.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/BIASafe_AI",
+      "linkedin": "https://www.linkedin.com/company/biasafe/"
     }
   }
 }
