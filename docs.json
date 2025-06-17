@@ -7,7 +7,7 @@
     "light": "#B088F2",
     "dark": "#4E00CC"
   },
-  "favicon": "/favicon.jpg",
+  "favicon": "/BIASafe-icon-white.png",
   "navigation": {
     "tabs": [
       {
@@ -52,15 +52,10 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "BIASafe Website",
+        "href": "https://www.biasafe.ai/"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
+    ]
   },
   "footer": {
     "socials": {
