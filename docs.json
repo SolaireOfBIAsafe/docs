@@ -7,7 +7,7 @@
     "light": "#B088F2",
     "dark": "#4E00CC"
   },
-  "favicon": "/favicon.jpg",
+  "favicon": "/BIASafe-icon-white.png",
   "navigation": {
     "tabs": [
       {
@@ -15,11 +15,7 @@
         "groups": [
           {
             "group": "Introduction",
-            "pages": [
-              "content/intro/about",
-              "content/intro/why",
-              "content/intro/meet-soteria"
-            ]
+            "pages": ["content/intro/about", "content/intro/meet-soteria"]
           },
           {
             "group": "Soteria",
@@ -42,7 +38,7 @@
               "content/portfoliomanagement/execution-engine",
               "content/portfoliomanagement/real-time-data",
               "content/portfoliomanagement/monitoring&reporting",
-              "content/portfoliomanagement/holistic-integration"
+              "content/portfoliomanagement/unified-portfolio-management"
             ]
           }
         ]
@@ -50,21 +46,16 @@
     ]
   },
   "logo": {
-    "light": "/BIASafeLogo.png",
-    "dark": "/BIASafeLogo.png"
+    "light": "/BIASafeDarkLogo.png",
+    "dark": "/BIASafeWhiteLogo.svg"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "BIASafe Website",
+        "href": "https://www.biasafe.ai/"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
+    ]
   },
   "footer": {
     "socials": {
